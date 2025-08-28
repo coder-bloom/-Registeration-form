@@ -173,18 +173,6 @@ const form = document.getElementById('interest-form');
 const submitButton = document.getElementById('submit-button');
 const formContainer = document.getElementById('form-container');
 const confirmationMessage = document.getElementById('confirmation-message');
-const modal = document.getElementById('notification-modal');
-const modalTitle = document.getElementById('modal-title');
-const modalMessage = document.getElementById('modal-message');
-const modalCloseButton = document.getElementById('modal-close-button');
-
-function showModal(title, message) {
-    modalTitle.textContent = title;
-    modalMessage.textContent = message;
-    modal.classList.remove('hidden');
-}
-
-modalCloseButton.addEventListener('click', () => modal.classList.add('hidden'));
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -198,16 +186,35 @@ form.addEventListener('submit', e => {
             if (data.result === 'success') {
                 formContainer.classList.add('hidden');
                 confirmationMessage.classList.remove('hidden');
+
+                Toastify({
+                    text: "Form submitted successfully!",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#4CAF50",
+                    stopOnFocus: true
+                }).showToast();
+
             } else {
                 throw new Error(data.error || 'Unknown server error.');
             }
         })
         .catch(error => {
-            showModal('Submission Error', 'An error occurred. Please try again.');
+            Toastify({
+                text: "Submission failed! Please try again.",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "#FF0000",
+                stopOnFocus: true
+            }).showToast();
+
             submitButton.disabled = false;
             submitButton.textContent = 'Submit Interest Form';
         });
 });
+
   </script>
 </body>
 </html>
