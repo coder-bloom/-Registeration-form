@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - PM Surya Ghar Interest Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <div id="form-container" class="w-full max-w-2xl bg-white rounded-2xl shadow-xl transition-all duration-500 sm:p-6 p-4">
+    <div class="p-6 sm:p-8 border-b-4 sm:border-b-8 border-indigo-600 rounded-t-2xl">
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">PM Surya Ghar: Muft Bijli Yojana - Interest Form (Hoshiarpur)</h1>
+      <p class="mt-2 sm:mt-3 text-gray-600 text-sm sm:text-base">
+        Welcome! Fill out this form to express your interest.
+      </p>
+    </div>
+
+    <form id="interest-form" class="p-4 sm:p-8 space-y-4 sm:space-y-6">
+      
+      <!-- Personal Details -->
+      <fieldset>
+        <legend class="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4">Personal Details</legend>
+        <div class="space-y-3 sm:space-y-4">
+          <div>
+            <label for="fullName" class="block text-sm sm:text-base font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
+            <input type="text" id="fullName" name="Full Name" required class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base">
+          </div>
+          <div>
+            <label for="contactNumber" class="block text-sm sm:text-base font-medium text-gray-700">Contact Number <span class="text-red-500">*</span></label>
+            <input type="tel" id="contactNumber" name="Contact Number" required pattern="[0-9]{10}" title="Enter 10-digit number" class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base">
+          </div>
+          <div>
+            <label for="emailAddress" class="block text-sm sm:text-base font-medium text-gray-700">Email Address</label>
+            <input type="email" id="emailAddress" name="Email Address" class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Address Details -->
+      <fieldset>
+        <legend class="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4">Address Details</legend>
+        <div class="space-y-3 sm:space-y-4">
+          <div>
+            <label for="fullAddress" class="block text-sm sm:text-base font-medium text-gray-700">Full Address <span class="text-red-500">*</span></label>
+            <textarea id="fullAddress" name="Full Address" rows="3" required class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base"></textarea>
+          </div>
+          <div>
+            <label for="city" class="block text-sm sm:text-base font-medium text-gray-700">City/Town/Village <span class="text-red-500">*</span></label>
+            <input type="text" id="city" name="City/Town/Village" required class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base">
+          </div>
+          <div>
+            <label for="pinCode" class="block text-sm sm:text-base font-medium text-gray-700">PIN Code <span class="text-red-500">*</span></label>
+            <input type="text" id="pinCode" name="PIN Code" required pattern="[0-9]{6}" title="Enter 6-digit PIN" class="mt-1 block w-full px-2 sm:px-3 py-2 sm:py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base">
+          </div>
+        </div>
+      </fieldset>
+
+        <!-- Property & Electricity Details -->
+        <fieldset>
+            <legend class="text-xl font-semibold text-gray-700 mb-4">Property & Electricity Details</legend>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Do you own the property? <span class="text-red-500">*</span></label>
+                    <div class="mt-2 space-x-4">
+                        <label class="inline-flex items-center"><input type="radio" name="Owns Property" value="Yes" required class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"> <span class="ml-2">Yes</span></label>
+                        <label class="inline-flex items-center"><input type="radio" name="Owns Property" value="No" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"> <span class="ml-2">No</span></label>
+                    </div>
+                </div>
+                <div>
+                    <label for="roofType" class="block text-sm font-medium text-gray-700">What type of roof do you have? <span class="text-red-500">*</span></label>
+                    <select id="roofType" name="Roof Type" required class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="" disabled selected>Select an option</option>
+                        <option>Flat Concrete Roof (Lanter)</option>
+                        <option>Tilted Concrete Roof</option>
+                        <option>Metal or Asbestos Sheet Roof</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="consumerNumber" class="block text-sm font-medium text-gray-700">PSPCL Electricity Consumer Account Number <span class="text-red-500">*</span></label>
+                    <input type="text" id="consumerNumber" name="Consumer Account Number" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="averageBill" class="block text-sm font-medium text-gray-700">Average monthly electricity bill? <span class="text-red-500">*</span></label>
+                    <select id="averageBill" name="Average Bill" required class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="" disabled selected>Select an option</option>
+                        <option>₹3,001 - ₹4,000</option>
+                        <option>₹4,001 - ₹6,000</option>
+                        <option>₹6,001 - ₹8,000</option>
+                        <option>More than ₹8,000</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Are you interested in availing a loan for the solar installation? <span class="text-red-500">*</span></label>
+                    <div class="mt-2 space-x-4">
+                        <label class="inline-flex items-center"><input type="radio" name="Interested in Loan" value="Yes" required class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"> <span class="ml-2">Yes</span></label>
+                        <label class="inline-flex items-center"><input type="radio" name="Interested in Loan" value="No" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"> <span class="ml-2">No</span></label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+      <!-- Property Ownership -->
+      <fieldset>
+        <legend class="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4">Property Details</legend>
+        <div class="space-y-3 sm:space-y-4">
+          <div>
+            <label class="block text-sm sm:text-base font-medium text-gray-700">Do you own the property? <span class="text-red-500">*</span></label>
+            <div class="mt-1 sm:mt-2 space-x-3 sm:space-x-4 flex">
+              <label class="inline-flex items-center">
+                <input type="radio" name="Owns Property" value="Yes" required class="focus:ring-indigo-500 h-4 w-4 sm:h-5 sm:w-5 text-indigo-600 border-gray-300">
+                <span class="ml-2 text-sm sm:text-base">Yes</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="radio" name="Owns Property" value="No" class="focus:ring-indigo-500 h-4 w-4 sm:h-5 sm:w-5 text-indigo-600 border-gray-300">
+                <span class="ml-2 text-sm sm:text-base">No</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Consent -->
+      <fieldset>
+        <legend class="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4">Consent & Submission</legend>
+        <div class="flex items-start">
+          <div class="flex items-center h-5 sm:h-6">
+            <input id="consent" name="Consent" type="checkbox" required class="focus:ring-indigo-500 h-4 w-4 sm:h-5 sm:w-5 text-indigo-600 border-gray-300 rounded">
+          </div>
+          <div class="ml-3 text-sm sm:text-base">
+            <label for="consent" class="font-medium text-gray-700">I agree to be contacted regarding the PM Surya Ghar Yojana. <span class="text-red-500">*</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="pt-4">
+        <button type="submit" id="submit-button" class="w-full flex justify-center py-2 sm:py-3 px-4 border border-transparent rounded-md shadow-sm text-base sm:text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          Submit Interest Form
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Confirmation & Modal -->
+  <div id="confirmation-message" class="hidden w-full max-w-2xl bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-green-600">Thank You!</h2>
+    <p class="mt-2 sm:mt-4 text-sm sm:text-lg text-gray-700">Your interest has been recorded! A representative will contact you shortly.</p>
+  </div>
+
+  <div id="notification-modal" class="fixed inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full hidden z-50 flex items-center justify-center">
+    <div class="relative mx-auto p-4 sm:p-6 border w-full max-w-md shadow-lg rounded-xl bg-white">
+      <div class="mt-2 sm:mt-3 text-center">
+        <h3 id="modal-title" class="text-lg sm:text-xl leading-6 font-bold text-gray-900"></h3>
+        <div class="mt-2 sm:mt-4 px-4 sm:px-7 py-2 sm:py-3">
+          <p id="modal-message" class="text-sm sm:text-base text-gray-600"></p>
+        </div>
+        <div class="items-center px-2 sm:px-4 py-2 sm:py-3">
+          <button id="modal-close-button" class="w-full px-4 py-2 bg-blue-600 text-white text-base sm:text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbydjdd0-zwgSSVWozNzlkYPY-YYnRbAAGn8l9-0pmR77OAqJV_jkf-F0HFdwHitN3b8/exec';
+const form = document.getElementById('interest-form');
+const submitButton = document.getElementById('submit-button');
+const formContainer = document.getElementById('form-container');
+const confirmationMessage = document.getElementById('confirmation-message');
+const modal = document.getElementById('notification-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalMessage = document.getElementById('modal-message');
+const modalCloseButton = document.getElementById('modal-close-button');
+
+function showModal(title, message) {
+    modalTitle.textContent = title;
+    modalMessage.textContent = message;
+    modal.classList.remove('hidden');
+}
+
+modalCloseButton.addEventListener('click', () => modal.classList.add('hidden'));
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === 'success') {
+                formContainer.classList.add('hidden');
+                confirmationMessage.classList.remove('hidden');
+            } else {
+                throw new Error(data.error || 'Unknown server error.');
+            }
+        })
+        .catch(error => {
+            showModal('Submission Error', 'An error occurred. Please try again.');
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Interest Form';
+        });
+});
+  </script>
+</body>
+</html>
